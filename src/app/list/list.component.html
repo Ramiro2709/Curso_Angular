@@ -1,0 +1,22 @@
+<div class="content">
+    <!-- LIST OF ITEMS -->
+    <div class="row justify-content-md-center">
+      <ul class="list-group">
+      <li class="list-group-item list-group-item-action" *ngFor="let item of items" > <!-- For de angular -->
+        <span>{{item.name}} </span> <!-- Objeto item -->
+        <span class="badge">{{item.creationDate | date}}</span> <!-- Propiedades del objeto -->
+        <div class="pull-right">
+          <button class="btn btn-primary btn-xs fa fa-pencil" (click)="onEdit(item)"></button>
+          <button class="btn btn-danger btn-xs fa fa-trash-o" (click)="onRemove(item)"></button> <!-- Funcion en list.components.ts -->
+        </div>
+      </li>
+      </ul>
+      </div>
+      <!-- NEW ITEM -->
+      <div class="row justify-content-md-center">
+        <nav>
+          <a routerLink="/newitem" class="pull-right">New item</a>
+        </nav>
+    </div>
+</div>
+    
